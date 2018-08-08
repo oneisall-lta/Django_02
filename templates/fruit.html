@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水果页面</title>
+    <script type="text/css">
+
+    </script>
+</head>
+<body>
+<ul style="list-style: circle">
+    {% for index in fruits %}
+        {% empty %}
+        <li>请确认水果列表是否有水果</li>
+        {% if forloop.first %}
+            <li style="color: yellow;">{{ index }}</li>
+            {% else %}
+            <li>{{ index }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+</body>
+</html>

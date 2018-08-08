@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示运动信息</title>
+</head>
+<body>
+{#{% if url == '/homework/allsports/' %}#}
+{#    <ul>#}
+{#        运动种类:#}
+{#        <li>足球</li>#}
+{#        <li>排球</li>#}
+{#        <li>篮球</li>#}
+{#        <li>网球</li>#}
+{#    </ul>#}
+{#{% elif url == '/homework/nosports/' %}#}
+{#    <span style="font-style: italic;color: red;">没有运动信息</span>#}
+{##}
+{#{% endif %}#}
+{% for index in list %}
+    {{ index }}<br/>
+    {% empty %}
+    <h3>没有运动信息</h3>
+{% endfor %}
+
+
+</body>
+</html>
